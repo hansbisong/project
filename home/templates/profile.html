@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div class="container justify-content-center">
+
+  <form method="POST">
+
+
+    {% csrf_token %}
+    {{form | crispy}}
+    <input type="submit" value="save">
+
+  </form>
+</div>
+
+
+{% endblock %}
